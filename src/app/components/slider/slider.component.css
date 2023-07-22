@@ -1,0 +1,13 @@
+.rowposter-container {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.rowposter {
+    display: inline-flex; 
+    gap: 10px;
+}
+
+.rowposter-container::-webkit-scrollbar {
+    display: none;
+}

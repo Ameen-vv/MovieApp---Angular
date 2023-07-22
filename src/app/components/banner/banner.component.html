@@ -1,0 +1,44 @@
+<div class="h-[70vh]">
+    <div class="relative h-full">
+      <!-- Background image -->
+      <div
+        class="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+        [style.background-image]="'url(' + getImageUrl(movies[movieNo].backdrop_path) + ')'"
+      ></div>
+  
+      <!-- Overlay -->
+      <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+  
+      <!-- Slide content -->
+      <div class="absolute bottom-0 left-0 w-full h-full">
+        <div class="max-w-lg p-4 text-white description">
+          <h1 class="text-4xl font-bold mb-4">{{movies[movieNo].title}}</h1>
+          <p class="text-sm">{{movies[movieNo].overview}}</p>
+        </div>
+      </div>
+  
+      <!-- Slide controllers -->
+      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex items-center ">
+        <button
+          class="bg-transparent w-10 h-10 rounded-full  focus:outline-none "
+          (click)="prevMovie()"
+        >
+        <svg fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"></path>
+          </svg>
+        </button>
+        <button
+          class="bg-transparent w-10 h-10 rounded-full  focus:outline-none mx-4"
+          (click)="nextMovie()"
+        >
+        <svg fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  

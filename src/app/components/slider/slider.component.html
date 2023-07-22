@@ -1,0 +1,10 @@
+<div class="row mt-3 p-6">
+    <h5 class="text-white font-semibold text-[20px]">{{title}}</h5>
+    <div class="rowposter-container mt-2">
+        <div class="rowposter">
+            <ng-container *ngFor="let movie of movies">
+                <app-movie-cards [movie]="movie"></app-movie-cards>
+            </ng-container>
+        </div>
+    </div>
+</div>

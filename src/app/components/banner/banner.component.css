@@ -1,0 +1,25 @@
+/* hero.component.css */
+@media (max-height: 640px) {
+    .h-3/4 {
+      height: 480px; /* 3/4 of 640px */
+    }
+  }
+  
+  /* Adjust slide content positioning */
+  .description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* Style the arrow icons */
+
+  
+  /* Adjust the position of slide controllers */
+  .slide-controllers {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
