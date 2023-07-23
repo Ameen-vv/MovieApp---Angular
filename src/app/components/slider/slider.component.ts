@@ -17,9 +17,9 @@ export class SliderComponent implements OnInit {
 
     ngOnInit(): void {
         this.apiService.getMovieGenre(this.genreKey).subscribe((response) => {
-          this.movies = response.results.slice(0,20);
-        })
-        this.imageUrl = this.apiService.imageUrl
+          this.movies = response.results;
+        });
+        this.imageUrl = this.apiService.imageUrl;
     }
     
 }

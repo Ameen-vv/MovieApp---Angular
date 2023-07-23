@@ -1,7 +1,7 @@
-<div class="app-movie-cards">
+<div class="app-movie-cards" (click)="navigateToMovie(movie.id)">
     <img [src]="getImageUrl(movie.backdrop_path)" 
     class="rowing largeposter" 
     alt="..."
     >
-    <p class="relative bottom-6 left-0 text-white font-bold text-sm">{{movie.title}}</p>
+    <p class="relative bottom-6 left-2 text-white font-bold text-sm">{{movie.title}}</p>
 </div>  

@@ -1,0 +1,30 @@
+<div class="contain ">
+    <div class="flex flex-wrap p-5">
+      <div class="lg:w-5/12 mt-10" x-if="getMovieDetailResult.poster_path">
+        <img src="https://image.tmdb.org/t/p/original/{{movie.backdrop_path}}" alt="">
+      </div>
+      <div class="lg:w-7/12 mt-5 p-4">
+        <h1 class="mt-2 mb-2 text-3xl font-bold">{{movie.title}}</h1>
+        <p class="mt-3 mb-3">{{movie.overview}}</p>
+        <a class="btn btn-md inline-block bg-blue-500 text-white px-4 py-2 rounded" href="https://www.themoviedb.org/video/play?key={{trailer}}" >Watch trailer</a>
+        <div class="flex flex-wrap mt-4 p-4">
+          <h2 class="text-white text-xl w-full">Top Cast</h2>
+          <div class="flex flex-wrap w-full">
+  
+            <div class="lg:w-6/12" *ngFor="let cast of casts">
+              <div class="flex flex-wrap mt-2 mb-2">
+                <div class="lg:w-2/12">
+                  <img src="https://image.tmdb.org/t/p/original/{{cast.profile_path}}" alt="">
+                </div>
+                <div class="lg:w-8/12 ms-2">
+                  <h3 class="text-white font-bold">{{cast.original_name}}</h3>
+                  <p class="text-white">{{cast.character}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
