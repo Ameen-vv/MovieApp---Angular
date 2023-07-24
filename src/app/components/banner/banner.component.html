@@ -11,9 +11,9 @@
   
       <!-- Slide content -->
       <div class="absolute bottom-0 left-0 w-full h-full">
-        <div class="max-w-lg p-4 text-white description">
-          <h1 class="text-4xl font-bold mb-4">{{movies[movieNo].title}}</h1>
-          <p class="text-sm">{{movies[movieNo].overview}}</p>
+        <div class="max-w-lg p-4 text-white description mt-10">
+          <h1 class="text-s, md:text-4xl font-bold mb-4">{{movies[movieNo].title}}</h1>
+          <p class="text-[12px]">{{movies[movieNo].overview}}</p>
           <button class="bg-red-600 py-1 px-3 mt-2 rounded-md" (click)="navigateMovie(movies[movieNo].id)" >Show More </button>
         </div>
       </div>

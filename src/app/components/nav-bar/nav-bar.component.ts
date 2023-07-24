@@ -1,4 +1,5 @@
 import { Component,HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,9 +7,10 @@ import { Component,HostListener } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
-  showSearch: boolean = false;
+  
+  constructor(private router : Router){};
 
-  toggleSearch() {
-    this.showSearch = !this.showSearch;
-  }
+  navigateSearch(){
+    this.router.navigate(['/search']);
+  };
 }

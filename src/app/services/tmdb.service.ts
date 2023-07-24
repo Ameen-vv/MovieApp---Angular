@@ -38,4 +38,9 @@ export class TmdbService {
     return this.http.get(url);
   };
 
+  searchMovie(text:string):Observable<any>{
+    const url = `${this.apiUrl}/search/movie?api_key=${Environments.apiKeyTMDB}&query=${text}`;
+    return this.http.get(url);
+  };
+
 }
